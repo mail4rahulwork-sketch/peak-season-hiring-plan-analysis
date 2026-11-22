@@ -1,5 +1,7 @@
 # Contact Centre Headcount Capacity Plan: When Do We Need to Hire?
 
+![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white) ![Planning](https://img.shields.io/badge/horizon-26%20weeks-e36209) ![Data](https://img.shields.io/badge/data-simulated-lightgrey) ![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
 A 26-week **long-term capacity plan** in Python. It turns a contact forecast into required FTE, projects available FTE after **attrition, hiring lead time, training and new-hire ramp**, and compares three hiring strategies for a festive peak.
 
 > **Data note:** all data is **simulated**. No company or customer data is used.
@@ -66,5 +68,16 @@ python capacity_plan.py
 
 Long-term capacity planning · Headcount modelling · Attrition & backfill · Hiring lead time & ramp · Scenario analysis · Python (pandas, NumPy)
 
+
 ---
-Built by **Rahul**, Control Tower – WFM Analyst. [LinkedIn](https://www.linkedin.com/in/rahul-219543159/) · [More projects](https://github.com/mail4rahulwork-sketch)
+
+## About me
+
+I'm Rahul, a Control Tower – WFM Analyst in Gurugram. I build these small projects to work through the planning problems I see on the job, using made-up data so nothing confidential leaves work. If you spot something I could do better, I'd like to hear it.
+
+[LinkedIn](https://www.linkedin.com/in/rahul-219543159/) · [GitHub profile](https://github.com/mail4rahulwork-sketch)
+
+**Other projects**
+- [Contact Centre WFM Dashboard (Power BI, live demo)](https://github.com/mail4rahulwork-sketch/powerbi-contact-centre-wfm-dashboard)
+- [WFM Forecast to Erlang C Staffing](https://github.com/mail4rahulwork-sketch/wfm-forecast-erlang-staffing)
+- [Intraday RTA Early Warning](https://github.com/mail4rahulwork-sketch/intraday-rta-early-warning)
