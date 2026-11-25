@@ -1,10 +1,22 @@
-# Contact Centre Headcount Capacity Plan: When Do We Need to Hire?
+# Peak-Season Hiring Plan: When to Hire, and How Many?
 
 ![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white) ![Planning](https://img.shields.io/badge/horizon-26%20weeks-e36209) ![Data](https://img.shields.io/badge/data-simulated-lightgrey) ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
-A 26-week **long-term capacity plan** in Python. It turns a contact forecast into required FTE, projects available FTE after **attrition, hiring lead time, training and new-hire ramp**, and compares three hiring strategies for a festive peak.
-
 > **Data note:** all data is **simulated**. No company or customer data is used.
+
+## Business problem
+
+A 120-person support team faces a 4-week festive peak. Hiring takes 6 weeks and new joiners need another 6 weeks to become fully productive, while about 3.4% of the team leaves every month. HR and finance need to know when to open requisitions, how many to hire, and how to avoid paying for surplus staff after the peak.
+
+| | |
+|---|---|
+| **Who asks** | Operations head, HR / talent acquisition, finance |
+| **Data used** | Weekly demand forecast with growth and a festive peak, handle time, shrinkage, attrition rate, hiring lead time and ramp curve |
+| **Approach** | Built a 26-week supply vs demand model and compared three hiring strategies on understaffed weeks, peak coverage, total hires and surplus after the peak |
+
+## Recommendation
+
+Hire permanent staff 12 weeks ahead for the baseline only, and cover the peak with a temporary batch trained in advance. It gives full peak coverage like planned hiring, but cuts the post-peak surplus from about 28 FTE to about 10.
 
 ```mermaid
 ---
@@ -23,7 +35,7 @@ xychart-beta
     line [119,118,117,116,115,114,113,112,112,116,116,117,137,144,151,154,153,152,151,125,126,127,127,126,125,124]
 ```
 
-## Assumptions
+## Inputs and assumptions
 
 | Input | Value |
 |---|---|
@@ -36,13 +48,13 @@ xychart-beta
 
 So a hire raised today is **not fully productive for 12 weeks**.
 
-## Strategies compared
+## Options compared
 
 - **A. Reactive:** raise a hiring request when the gap shows up.
 - **B. Planned:** raise requests 12 weeks ahead of need, including expected attrition.
 - **C. Planned + flex:** plan permanent hiring to the *baseline* and cover the peak with a temporary batch trained ahead and released after the peak.
 
-## Key findings (simulated)
+## Findings
 
 | Strategy | Weeks understaffed | Worst gap (FTE) | Peak coverage | Hires | Avg overstaff after peak (FTE) |
 |---|---:|---:|---:|---:|---:|
@@ -64,20 +76,14 @@ pip install -r requirements.txt
 python capacity_plan.py
 ```
 
-## Skills shown
-
-Long-term capacity planning · Headcount modelling · Attrition & backfill · Hiring lead time & ramp · Scenario analysis · Python (pandas, NumPy)
-
-
----
-
 ## About me
 
-I'm Rahul, a Control Tower – WFM Analyst in Gurugram. I build these small projects to work through the planning problems I see on the job, using made-up data so nothing confidential leaves work. If you spot something I could do better, I'd like to hear it.
+I'm Rahul, a Business Analyst in operations and CX analytics, based in Gurugram (currently at Shiprocket, before that DTDC Express). I build these small case studies on made-up data to practise the kind of business questions I work on, so nothing confidential leaves work. Feedback is welcome.
 
 [LinkedIn](https://www.linkedin.com/in/rahul-219543159/) · [GitHub profile](https://github.com/mail4rahulwork-sketch)
 
-**Other projects**
-- [Contact Centre WFM Dashboard (Power BI, live demo)](https://github.com/mail4rahulwork-sketch/powerbi-contact-centre-wfm-dashboard)
-- [WFM Forecast to Erlang C Staffing](https://github.com/mail4rahulwork-sketch/wfm-forecast-erlang-staffing)
-- [Intraday RTA Early Warning](https://github.com/mail4rahulwork-sketch/intraday-rta-early-warning)
+**Other case studies**
+- [Why did service level collapse in the festive peak? (Power BI)](https://github.com/mail4rahulwork-sketch/service-performance-powerbi-analysis)
+- [Sale-week support demand: where should the extra budget go?](https://github.com/mail4rahulwork-sketch/sale-week-support-demand-analysis)
+- [SLA early-warning rules: is acting early worth the cost?](https://github.com/mail4rahulwork-sketch/sla-early-warning-analysis)
+- [Demand forecast to staffing cost: how much can we save?](https://github.com/mail4rahulwork-sketch/demand-forecast-staffing-cost-analysis)
